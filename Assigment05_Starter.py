@@ -31,7 +31,7 @@ strMenu = """
 # in a text file called ToDoList.txt into a python list of dictionaries rows (like Lab 5-2)
 # TODO: Add Code Here
 
-objFile = open('/Users/pablomontijo/Documents/_PythonClass/Assignment05/ToDoList.txt', 'r')
+objFile = open('ToDoList.txt', 'r')
 for row in objFile:
     lstRow = row.split(",")
     dicRow = {"Task": lstRow[0], "Priority": lstRow[1]}
@@ -50,7 +50,7 @@ while (True):
 
         print(f'{"Task":<20}' + f'{"Priority":>10}')
 
-        objFile = open('/Users/pablomontijo/Documents/_PythonClass/Assignment05/ToDoList.txt', 'r')
+        objFile = open('ToDoList.txt', 'r')
         for row in objFile:
             lstRow = row.split(",")
             print(f'{lstRow[0]:<20}' + f'{lstRow[1].strip():>10}')
@@ -81,7 +81,7 @@ while (True):
     elif (strChoice.strip() == '4'):
         # TODO: Add Code Here
 
-        objFile = open('/Users/pablomontijo/Documents/_PythonClass/Assignment05/ToDoList.txt', 'w')
+        objFile = open('ToDoList.txt', 'w')
 
         for row in lstTable:
             objFile.write(row["Task"] + ',' + row["Priority"] + '\n')
