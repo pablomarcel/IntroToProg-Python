@@ -7,6 +7,7 @@
 # ChangeLog (Who,When,What):
 # RRoot,1.1.2030,Created started script
 # Pablo Montijo,2.15.2021,Added code to complete assignment 5
+# Pablo Montijo,2.16.2021,Added .strip() line 38
 # ------------------------------------------------------------------------ #
 
 # -- Data -- #
@@ -34,7 +35,7 @@ strMenu = """
 objFile = open('ToDoList.txt', 'r')
 for row in objFile:
     lstRow = row.split(",")
-    dicRow = {"Task": lstRow[0], "Priority": lstRow[1]}
+    dicRow = {"Task": lstRow[0], "Priority": lstRow[1].strip()}
     lstTable.append(dicRow)
 objFile.close()
 
